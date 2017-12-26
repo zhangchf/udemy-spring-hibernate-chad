@@ -13,6 +13,14 @@
 <body>
     <h1>Hello, My Home page</h1>
 
+    <br/><br/>
+    <%--Hello World Form--%>
     <a href="hello/helloWorldForm">Hello World Form</a>
+
+    <br/><br/>
+    <%--Student Form--%>
+    <a href="student/showForm">Student Form</a>
+
+    <br/><br/>
 </body>
 </html>
