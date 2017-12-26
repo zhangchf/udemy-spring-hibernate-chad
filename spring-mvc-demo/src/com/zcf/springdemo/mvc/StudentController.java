@@ -21,8 +21,8 @@ public class StudentController {
     @RequestMapping("showForm")
     public String showForm(Model theModel) {
         Student theStudent = new Student();
-        theStudent.firstName = "John";
-        theStudent.lastName = "Doe";
+        theStudent.setFirstName("John");
+        theStudent.setLastName("Doe");
         theModel.addAttribute("student", theStudent);
         theModel.addAttribute("propertyCountryOptions", countryOptions);
         return "student-form";
@@ -30,7 +30,7 @@ public class StudentController {
 
     @RequestMapping("processForm")
     public String processForm(@ModelAttribute("student") Student theStudent) {
-        theStudent.lastName = theStudent.lastName.toUpperCase();
+        theStudent.setLastName(theStudent.getLastName().toUpperCase());
         return "student-confirmation";
     }
 }

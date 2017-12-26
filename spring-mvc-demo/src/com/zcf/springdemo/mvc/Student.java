@@ -7,15 +7,25 @@ import java.util.LinkedHashMap;
  */
 public class Student {
 
-    public String firstName;
-    public String lastName;
-    public String country;
-    public LinkedHashMap<String, String> countryOptions;
+    private String firstName;
+    private String lastName;
+
+    private String country;
+    private LinkedHashMap<String, String> countryOptions;
+
+    private String favoriteLanguage;
+    private LinkedHashMap<String, String> favoriteLanguageOptions;
 
     public Student() {
         countryOptions = new LinkedHashMap<>();
         countryOptions.put("US", "The United States");
         countryOptions.put("UK", "The United Kingdom");
+
+        favoriteLanguageOptions = new LinkedHashMap<>();
+        favoriteLanguageOptions.put("Java", "Java");
+        favoriteLanguageOptions.put("C#", "C#");
+        favoriteLanguageOptions.put("PHP", "PHP");
+        favoriteLanguageOptions.put("Ruby", "Ruby");
     }
 
     public String getFirstName() {
@@ -44,5 +54,17 @@ public class Student {
 
     public LinkedHashMap<String, String> getCountryOptions() {
         return countryOptions;
+    }
+
+    public String getFavoriteLanguage() {
+        return favoriteLanguage;
+    }
+
+    public void setFavoriteLanguage(String favoriteLanguage) {
+        this.favoriteLanguage = favoriteLanguage;
+    }
+
+    public LinkedHashMap<String, String> getFavoriteLanguageOptions() {
+        return favoriteLanguageOptions;
     }
 }

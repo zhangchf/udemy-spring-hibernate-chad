@@ -16,9 +16,13 @@
     <form:form action="processForm" modelAttribute="student">
 
         <br/><br/>
-        First name: <form:input path="firstName"/>
+        First name:
+        <form:input path="firstName"/>
+
         <br/><br/>
-        Last name: <form:input path="lastName"/>
+        Last name:
+        <form:input path="lastName"/>
+
         <br/><br/>
         Country:
         <form:select path="country">
@@ -30,7 +34,13 @@
             <%--Property country options--%>
             <form:options items="${propertyCountryOptions}"/>
         </form:select>
+
         <br/><br/>
+        Favorite Language:
+        <form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguageOptions}"/>
+        <form:radiobutton path="favoriteLanguage" label="Other" value="Other"/>
+        <br/><br/>
+
         <input type="submit" value="Submit"/>
 
     </form:form>
