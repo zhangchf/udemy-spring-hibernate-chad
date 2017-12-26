@@ -12,10 +12,14 @@
 </head>
 <body>
 
-Hello World!
+<%--processHelloWorldForm--%>
+<br/><br/>
+Hello World, ${param.studentName}
 
-${param.studentName}
+<%--processHelloWorldFormV2--%>
+<br/><br/>
+Shout: ${message}
 
-
+<br/><br/>
 </body>
 </html>
