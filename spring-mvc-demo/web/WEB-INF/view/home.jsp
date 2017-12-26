@@ -13,6 +13,6 @@
 <body>
     <h1>Hello, My Home page</h1>
 
-    <a href="helloWorldForm">Hello World Form</a>
+    <a href="hello/helloWorldForm">Hello World Form</a>
 </body>
 </html>
