@@ -1,5 +1,7 @@
 package com.zcf.springdemo.mvc;
 
+import com.zcf.springdemo.mvc.validation.CourseCode;
+
 import javax.validation.constraints.*;
 
 /**
@@ -16,10 +18,13 @@ public class Customer {
     @NotNull(message="required")
     @Min(value = 0, message = "must >= 0")
     @Max(value = 10, message = "must <= 10")
-    private Integer freePasses;
+    private Integer freePasses = 0;
 
     @Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "must be 5 chars/digits")
     private String postalCode;
+
+    @CourseCode(value = "TOPS", message = "must start with TOPS")
+    private String courseCode;
 
 
     public String getFirstName() {
@@ -52,5 +57,13 @@ public class Customer {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 }
