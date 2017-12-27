@@ -39,6 +39,13 @@
         Favorite Language:
         <form:radiobuttons path="favoriteLanguage" items="${student.favoriteLanguageOptions}"/>
         <form:radiobutton path="favoriteLanguage" label="Other" value="Other"/>
+
+        <br/><br/>
+
+        Operating Systems:
+        <form:checkbox path="operatingSystems" value="Linux"/>Linux
+        <form:checkbox path="operatingSystems" value="Mac OS" label="Mac OS"/>
+        <form:checkbox path="operatingSystems" value="MS Windows" label="MS Windows"/>
         <br/><br/>
 
         <input type="submit" value="Submit"/>
